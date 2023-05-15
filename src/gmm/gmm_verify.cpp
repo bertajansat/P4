@@ -26,8 +26,9 @@ float verify(const GMM &gmm_candidate, const fmatrix &dat)
 
 	//TODO: implement verification score based on gmm of the candidate
 	float score = 0.0F;
-
+	score = gmm_candidate.logprob(dat);
 	return score;
+	/// \ DONE Implementada la verificación de la score basada en el gmm del candidato
 }
 
 
@@ -43,8 +44,12 @@ float verify(const GMM &gmm_candidate, const GMM & gmm_world, const fmatrix &dat
 	lprobcand = 0.0F;
 	lprobbackground = 0.0F;
 
-	return score;
+	lprobcand = gmm_candidate.logprob(dat);
+	lprobbackground = gmm_world.logprob(dat);
+	score = lprobcand - lprobbackground;
 
+	return score;
+	/// \DONE Implementada la verificación tomando como referencia el model del mundo
 }
 
 

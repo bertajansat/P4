@@ -213,6 +213,17 @@ namespace upc
 			//
 			// Update old_prob, new_prob and inc_prob in order to stop the loop if logprob does not
 			// increase more than inc_threshold.
+			new_prob = this->em_expectation(data,weights);
+			this->em_maximization(data,weights);
+
+			inc_prob = new_prob - old_prob;
+			old_prob = new_prob;
+
+			if (inc_prob < inc_threshold){
+				return 0;	
+			}
+			
+			
 			if (verbose & 01)
 				cout << "GMM nmix=" << nmix << "\tite=" << iteration << "\tlog(prob)=" << new_prob << "\tinc=" << inc_prob << endl;
 		}
