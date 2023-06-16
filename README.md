@@ -33,6 +33,41 @@ ejercicios indicados.
   principal (`sox`, `$X2X`, `$FRAME`, `$WINDOW` y `$LPC`). Explique el significado de cada una de las 
   opciones empleadas y de sus valores.
 
+Podemos encontrar la forma de usar el wav2slp.sh en el mismo script. 
+Inicialmente necesitamos una señal wav de entrada y el script nos devuelve un archivo llamado output.lp. 
+
+Posteriormente vemos la definición de aquellos parámetros que el usuario deberá introducir al invocar el script. Estos son el número de coeficiente de predicción lineal, el fichero de entrada y el fichero de salida. Una vez los haya introducido en ese orden, se guardarán en las respectivas variables. 
+
+Una vez hecho lo anterior, pasamos a analizar los distintos comandos involucrados en el *pipeline* principal. 
+
+  · _sox_ : Nos sirve para editar la señal de audoio. En uestra pipeline se le entrega el fichero de entrada con las siguientes opciones:
+
+        * -t : Tipo de fichero de audio. Nosotros usamos raw.
+        * -e: Indicamos la codificación que queremos aplicar al fichero, en nuestro caso "signed".
+        * b: Número de bits, usamos 16 bits. 
+        * -: Redirección del output, es decir la pipeline.
+
+  · _$X2X_ : Se trata de un paquete de SPTK que permite convertir ficheros a distintos formatos.
+
+        * +sf : Pasamos de un formato a otro. Es decir de s (short - 2 bytes) a f (float - 4 bytes). 
+
+  · _$FRAME_ : Sirve para segmentar la señal de entrada en disintas tramas con un determinado desplazamiento.
+
+        * -l : Número de muestras de cada trama. Como se puede ver usamos 240 muestras, lo que equivale a 30 ms (fm = 8000 Hz). 
+        * -p : Número de muestras de desplazamiento, usamos 80 muestras lo que equivale a 10 ms de desplazamiento entre ventanas.
+
+  · _$WINDOW_ : Con este comando se le aplica a cada trama una ventana, que por defecto se usa la Blackman.
+
+        * -l : Tamaño de la ventana de entrada, es decir las 240 muestras de cada trama, configurado previamente.
+        * -L : Tamaño de la ventana de salida, mantenemos las 240 muestras.
+
+  · _$LPC_ : Se usa para calcular los coeficientes LPC de cada trama enventanada.
+
+        * -l : Tamaño de la ventana, en nuestro caso 240 muestras.
+        * -m : Número de coeficientes LPC que queremos, lo determinamos en base a su orden 
+
+
+        
 - Explique el procedimiento seguido para obtener un fichero de formato *fmatrix* a partir de los ficheros de
   salida de SPTK (líneas 45 a 51 del script `wav2lp.sh`).
 
