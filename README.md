@@ -80,6 +80,7 @@ Para obtener el fichero de formato *fmatrix* necesitamos saber el número de fil
 Por otro lado queremos obtener el número de filas. Para lograrlo usaremos el comando perl. Inicialmente tenemos un conjunto de floats de 4 bytes, para poder realizar el cálculo hacemos una transformación y los pasamos a ASCII. Por lo que se genera un fichero con los valores ASCII, uno en cada fila. A través del comando "wc -l" obtenemos el número de filas. 
 
   * ¿Por qué es más conveniente el formato *fmatrix* que el SPTK?
+  * 
 Este formato nos permite tener un mayor orden de los datos, de forma que tenemos las señales ordenadas y caracterizadas por tramas y coeficientes. Entonces en cada fila hay una trama de la señal y cada columna es un coeficiente con el que hemos parametrizado la trama. Cabe destacar que con las matrices podemos seleccionar las filas y columnas que nos interesen fácilmente a través de usar "cut". 
 
 
