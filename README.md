@@ -250,9 +250,9 @@ Usando mfcc:
 
     |                    | LP      | LPCC   | MFCC |
     |--------------------|:-------:|:------:|:----:|
-    | Número de errores  |         |        |      |
-    | Número total       |         |        |      |
-    | Tasa de error (%)  |         |        |      |
+    | Número de errores  |         |    2   |      |
+    | Número total       |         |    785 |      |
+    | Tasa de error (%)  |         |   0.25%|      |
 
 ### Verificación del locutor.
 
