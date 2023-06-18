@@ -227,7 +227,7 @@ Y tenemos estos resultados:
 
 ![image](https://github.com/bertajansat/P4/assets/127047656/df699190-dc3f-40c4-9322-cdb976678f6d)
 
-Se observa claramente que en la primera gráfica el locutor está mucho mejor modelado que en la segunda. Esto tiene sentido ya que el modelo GMM que corresponde al primer locutor se adapta mucho mejor a las muestras que al usar un locutor distinto. 
+Se observa claramente que en la primera gráfica el locutor está mucho mejor modelado que en la segunda. Esto tiene sentido ya que el modelo GMM que corresponde al primer locutor se adapta mucho mejor a sus muestras que al usar un locutor distinto. Esto lo vemos en la mayor cantidad de muestras fuera de la región prevista.
 
 
 ### Reconocimiento del locutor.
