@@ -107,6 +107,8 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
     parametrizadas.
   + ¿Cuál de ellas le parece que contiene más información?
 
+Obtendremos la mayor información de aquella gráfica con los coeficientes más incorrelados, es decir, que el nivel de correlación entre coeficientes cercanos es lo que nos indica cuanta información nos da. En nuestro caso podemos observar que.....
+
 - Usando el programa <code>pearson</code>, obtenga los coeficientes de correlación normalizada entre los
   parámetros 2 y 3 para un locutor, y rellene la tabla siguiente con los valores obtenidos.
 
