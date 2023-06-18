@@ -110,7 +110,7 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
     <code>FEAT=lp run_spkid lp</code>
 
     <code>FEAT=lpcc run_spkid lpcc</code>
-    
+
     <code>FEAT=mfcc run_spkid mfcc</code>
 
     A continuación, hemos convertimos a texto los coeficientes 2 y 3 para cada una de las parametrizaciones:
@@ -210,6 +210,14 @@ Complete el código necesario para realizar reconociminto del locutor y optimice
 
 - Inserte una tabla con la tasa de error obtenida en el reconocimiento de los locutores de la base de datos
   SPEECON usando su mejor sistema de reconocimiento para los parámetros LP, LPCC y MFCC.
+
+    |                    | LP      | LPCC   | MFCC |
+    |--------------------|:-------:|:------:|:----:|
+    | Número de errores  |         |        |      |
+    |--------------------|---------|--------|------|
+    | Número total       |         |        |      |
+    |--------------------|---------|--------|------|
+    | Tasa de error (%)  |         |        |      |
 
 ### Verificación del locutor.
 
