@@ -33,70 +33,19 @@ ejercicios indicados.
   principal (`sox`, `$X2X`, `$FRAME`, `$WINDOW` y `$LPC`). Explique el significado de cada una de las 
   opciones empleadas y de sus valores.
 
-Podemos encontrar la forma de usar el wav2slp.sh en el mismo script. 
-Inicialmente necesitamos una señal wav de entrada y el script nos devuelve un archivo llamado output.lp. 
-
-![image](https://github.com/bertajansat/P4/assets/127047656/f828aa56-14a8-425f-a314-4a0e011952fa)
-
-Posteriormente vemos la definición de aquellos parámetros que el usuario deberá introducir al invocar el script. Estos son el número de coeficiente de predicción lineal, el fichero de entrada y el fichero de salida. Una vez los haya introducido en ese orden, se guardarán en las respectivas variables. 
-
-![image](https://github.com/bertajansat/P4/assets/127047656/8d5d4bdd-5ef0-45e6-89b2-3fc88afd5f5f)
-
-Una vez hecho lo anterior, pasamos a analizar los distintos comandos involucrados en el *pipeline* principal. 
-
-  · _sox_ : Nos sirve para editar la señal de audoio. En uestra pipeline se le entrega el fichero de entrada con las siguientes opciones:
-
-        * -t : Tipo de fichero de audio. Nosotros usamos raw.
-        * -e: Indicamos la codificación que queremos aplicar al fichero, en nuestro caso "signed".
-        * b: Número de bits, usamos 16 bits. 
-        * -: Redirección del output, es decir la pipeline.
-
-  · _$X2X_ : Se trata de un paquete de SPTK que permite convertir ficheros a distintos formatos.
-
-        * +sf : Pasamos de un formato a otro. Es decir de s (short - 2 bytes) a f (float - 4 bytes). 
-
-  · _$FRAME_ : Sirve para segmentar la señal de entrada en disintas tramas con un determinado desplazamiento.
-
-        * -l : Número de muestras de cada trama. Como se puede ver usamos 240 muestras, lo que equivale a 30 ms (fm = 8000 Hz). 
-        * -p : Número de muestras de desplazamiento, usamos 80 muestras lo que equivale a 10 ms de desplazamiento entre ventanas.
-
-  · _$WINDOW_ : Con este comando se le aplica a cada trama una ventana, que por defecto se usa la Blackman.
-
-        * -l : Tamaño de la ventana de entrada, es decir las 240 muestras de cada trama, configurado previamente.
-        * -L : Tamaño de la ventana de salida, mantenemos las 240 muestras.
-
-  · _$LPC_ : Se usa para calcular los coeficientes LPC de cada trama enventanada.
-
-        * -l : Tamaño de la ventana, en nuestro caso 240 muestras.
-        * -m : Número de coeficientes LPC que queremos, lo determinamos en base a su orden 
-
-
         
 - Explique el procedimiento seguido para obtener un fichero de formato *fmatrix* a partir de los ficheros de
   salida de SPTK (líneas 45 a 51 del script `wav2lp.sh`).
 
-Para obtener el fichero de formato *fmatrix* necesitamos saber el número de filas y columnas que de la matriz. Para obtener el número de columnas solo necesitamos saber el orden de predicción y sumarle 1, debido a que el primer valor se corresponde a la ganancia y esta no está incluida en los coeficientes LPC. 
-
-Por otro lado queremos obtener el número de filas. Para lograrlo usaremos el comando perl. Inicialmente tenemos un conjunto de floats de 4 bytes, para poder realizar el cálculo hacemos una transformación y los pasamos a ASCII. Por lo que se genera un fichero con los valores ASCII, uno en cada fila. A través del comando "wc -l" obtenemos el número de filas. 
-
   * ¿Por qué es más conveniente el formato *fmatrix* que el SPTK?
-
-Este formato nos permite tener un mayor orden de los datos, de forma que tenemos las señales ordenadas y caracterizadas por tramas y coeficientes. Entonces en cada fila hay una trama de la señal y cada columna es un coeficiente con el que hemos parametrizado la trama. Cabe destacar que con las matrices podemos seleccionar las filas y columnas que nos interesen fácilmente a través de usar "cut". 
-
 
 - Escriba el *pipeline* principal usado para calcular los coeficientes cepstrales de predicción lineal
   (LPCC) en su fichero <code>scripts/wav2lpcc.sh</code>:
 
-  ![image](https://github.com/bertajansat/P4/assets/127047656/916de209-dff1-4cb2-a270-c9dfc963afe0)
-
-Tomando como referencia el fichero wav2lp.sh realizamos el scrpit wav2lpcc.sh. El comando principal de extracción de características sigue la misma estructura que en el wav2lp.sh, pero teniendo en mente que para obtener estos coeficientes cepstrales debemos antes calcular los LPC. Es por esto que primero se hace uso del comando $LPC y, posteriormente del comando $LPCC. 
 
 - Escriba el *pipeline* principal usado para calcular los coeficientes cepstrales en escala Mel (MFCC) en su
   fichero <code>scripts/wav2mfcc.sh</code>:
 
-  ![image](https://github.com/bertajansat/P4/assets/127047656/7ebd6755-3f98-4080-aec1-632cdf176da3)
-
-Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comando $MFCC, donde le indicamos el número de coeficientes además de qué banco de filtros queremos usar. 
 
 
 ### Extracción de características.
