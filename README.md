@@ -250,10 +250,10 @@ Usando mfcc:
 
     |                    | LP      | LPCC   | MFCC |
     |--------------------|:-------:|:------:|:----:|
-    | Número de errores  |         |    2   |      |
-    | Número total       |         |    785 |      |
-    | Tasa de error (%)  |         |   0.25%|      |
-
+    | Número de errores  |   58    |    2   |      |
+    | Número total       |   785   |   785  |      |
+    | Tasa de error (%)  |  7.39%  |  0.25% |      |
+ 
 ### Verificación del locutor.
 
 Complete el código necesario para realizar verificación del locutor y optimice sus parámetros.
