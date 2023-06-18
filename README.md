@@ -108,7 +108,9 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
     En primer lugar, parametrizamos en lp, lpcc y mfcc ejecutando run_spkid:
 
     <code>FEAT=lp run_spkid lp</code>
+
     <code>FEAT=lpcc run_spkid lpcc</code>
+    
     <code>FEAT=mfcc run_spkid mfcc</code>
 
     A continuación, hemos convertimos a texto los coeficientes 2 y 3 para cada una de las parametrizaciones:
