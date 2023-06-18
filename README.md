@@ -115,7 +115,7 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
     ![Alt text](image-1.png)
     Finalmente, para representar las gráficas a partir de los ficheros de texto, hemos ejecutado el fichero de matlab "graficas.m", cuyo código es el siguiente:
 
-    (%LP
+    `%LP
       datos_lp = load('lp_2_3.txt');
       coef_2_lp = datos_lp(:,1);
       coef_3_lp = datos_lp(:,2);
@@ -126,7 +126,7 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
       title('Parametrización LP')
       xlabel('Coeficiente 2')
       ylabel('Coeficiente 3')
-      grid on)
+      grid on`
     
     
       %LPCC
