@@ -200,16 +200,23 @@ Complete el código necesario para entrenar modelos GMM.
 - Inserte una gráfica que muestre la función de densidad de probabilidad modelada por el GMM de un locutor
   para sus dos primeros coeficientes de MFCC.
 
-  ![image](https://github.com/bertajansat/P4/assets/127047656/642eda55-bb1e-4dea-ba0e-30e686ae9aba)
+![image](https://github.com/bertajansat/P4/assets/127047656/4c308496-6483-4824-92e5-efcf35e6b347)
 
-Esta gráfica la hemos obtenido a través del comando:
+Obtenemos el gráfico anterior usando:
 
-![image](https://github.com/bertajansat/P4/assets/127047656/51822e13-02e5-4be6-917f-6ab5bd94516a)
+![image](https://github.com/bertajansat/P4/assets/127047656/a1367978-f278-498e-a5ec-6574302e10d9)
 
 
 - Inserte una gráfica que permita comparar los modelos y poblaciones de dos locutores distintos (la gŕafica
   de la página 20 del enunciado puede servirle de referencia del resultado deseado). Analice la capacidad
   del modelado GMM para diferenciar las señales de uno y otro.
+
+![image](https://github.com/bertajansat/P4/assets/127047656/642eda55-bb1e-4dea-ba0e-30e686ae9aba)
+
+Esta gráfica la hemos obtenido a través del comando:
+
+![image](https://github.com/bertajansat/P4/assets/127047656/51822e13-02e5-4be6-917f-6ab5bd94516a)
+
 
 ### Reconocimiento del locutor.
 
