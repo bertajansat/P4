@@ -251,11 +251,11 @@ Tal y como se puede observar, hemos cometido algún error ya que usando MFCC los
 
 
 
-    |                    | LP      | LPCC   | MFCC |
-    |--------------------|:-------:|:------:|:----:|
-    | Número de errores  |   58    |    2   |  99  |
-    | Número total       |   785   |   785  |  785 |
-    | Tasa de error (%)  |  7.39%  |  0.25% |12.61%|
+  |                    | LP      | LPCC   | MFCC |
+  |--------------------|:-------:|:------:|:----:|
+  | Número de errores  |   58    |    2   |  99  |
+  | Número total       |   785   |   785  |  785 |
+  | Tasa de error (%)  |  7.39%  |  0.25% |12.61%|
  
 ### Verificación del locutor.
 

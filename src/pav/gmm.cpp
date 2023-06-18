@@ -217,7 +217,6 @@ namespace upc
 			// increase more than inc_threshold.
 			
 			new_prob=this->em_expectation(data, weights); // Calcula el reparto
-			//this->em_maximization(data, weights); // Recalcula el modelo
 			// FAlta implementar el criterio de parada (old_prob, new_prob, inc_prob)
 			inc_prob=new_prob - old_prob;
 			old_prob=new_prob;
