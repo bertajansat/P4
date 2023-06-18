@@ -279,6 +279,7 @@ MFCC:
 
 ![image](https://github.com/bertajansat/P4/assets/127047656/d5d88eb1-cb1b-448b-9155-8f9f8d835fa0)
 
+Debido a que los resultados del MFCC no son correctos, usaremos el LPCC para los resultados finales.
  
 ### Test final
 
