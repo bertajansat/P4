@@ -245,14 +245,17 @@ Usando lpcc:
 
 Usando mfcc:
 
+![image](https://github.com/bertajansat/P4/assets/127047656/358a08fa-d092-4d3d-b866-47334f8e144b)
+
+Tal y como se puede observar, hemos cometido algún error ya que usando MFCC los resultados deberían ser mucho mejores de los que hemos obtenido. 
 
 
 
     |                    | LP      | LPCC   | MFCC |
     |--------------------|:-------:|:------:|:----:|
-    | Número de errores  |   58    |    2   |      |
-    | Número total       |   785   |   785  |      |
-    | Tasa de error (%)  |  7.39%  |  0.25% |      |
+    | Número de errores  |   58    |    2   |  99  |
+    | Número total       |   785   |   785  |  785 |
+    | Tasa de error (%)  |  7.39%  |  0.25% |12.61%|
  
 ### Verificación del locutor.
 
