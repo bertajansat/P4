@@ -272,7 +272,7 @@ LP:
 
 LPCC:
 
-![image](https://github.com/bertajansat/P4/assets/127047656/23572412-2865-4d44-8595-3236641e78e9)
+![image](https://github.com/bertajansat/P4/assets/127047656/89a3780c-2e91-4322-b880-012e4daf9e4e)
 
 
 MFCC:
