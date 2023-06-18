@@ -112,7 +112,9 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
     <code>FEAT=mfcc run_spkid mfcc</code>
 
     A continuación, hemos convertimos a texto los coeficientes 2 y 3 para cada una de las parametrizaciones:
-    ![Alt text](image-1.png)
+
+  ![Alt text](image-1.png)
+
     Finalmente, para representar las gráficas a partir de los ficheros de texto, hemos ejecutado el fichero de matlab "graficas.m", cuyo código es el siguiente:
 
     ·   %LP
@@ -161,18 +163,26 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
 
   + ¿Cuál de ellas le parece que contiene más información?
 
-Obtendremos la mayor información de aquella gráfica con los coeficientes más incorrelados, es decir, que el nivel de correlación entre coeficientes cercanos es lo que nos indica cuanta información nos da. En nuestro caso podemos observar que.....
+Obtendremos la mayor información de aquella gráfica con los coeficientes más incorrelados, es decir, que el nivel de correlación entre coeficientes cercanos es lo que nos indica cuanta información nos da. En nuestro caso podemos observar que en el caso de LP, parece haber una correlación lineal entre los coeficientes, por lo que tenemos poca información. En cambio, en el caso de LPCC y MFCC, ambos tiene una distribución más dispersa, aunque se puede observar menos correlación entre coeficientes en el caso de MFCC.
 
 - Usando el programa <code>pearson</code>, obtenga los coeficientes de correlación normalizada entre los
   parámetros 2 y 3 para un locutor, y rellene la tabla siguiente con los valores obtenidos.
+  
+  Ejecutamos el comando pearson para cada parametrización y obtenemos los coeficientes 2 y 3:
 
-  |                        | LP   | LPCC | MFCC |
-  |------------------------|:----:|:----:|:----:|
-  | &rho;<sub>x</sub>[2,3] |      |      |      |
+  ![Alt text](image-3.png)
+
+
+  |                        | LP      | LPCC   | MFCC |
+  |------------------------|:-------:|:------:|:----:|
+  | &rho;<sub>x</sub>[2,3] |-0.873524|0.150782|0.1476|
   
   + Compare los resultados de <code>pearson</code> con los obtenidos gráficamente.
+  Los valores obtenidos para &rho;<sub>x</sub>[2,3] nos indican el nivel de correlación entre los coeficientes 2 y 3, siendo el más correlado aquel con un valor absoluto más cercano a 1. Como podemos observar, para LP obtenemos un valor absoluto más cercano a 1, por lo que aporta menos información, mientras que los valores de LPCC y MFCC son más cercanos a 0, por lo que los coeficientes son más incorrelados entre sí y por lo tanto aportan más información. Además, podemos observar que los coeficientes para MFCC son ligeramente más incorrelados que para LPCC, como ya hemos comentado en el apartado anterior. 
+  Por lo tanto, los resultados de <code>pearson</code> obtenidos concuerdan con los obtenidos gráficamente.
   
 - Según la teoría, ¿qué parámetros considera adecuados para el cálculo de los coeficientes LPCC y MFCC?
+Según la teoría, para LPCC se suelen escoger entre 8 y 14 coeficientes, siendo suficiente 13 coeficientes. Para MFCC, se suelen escoger entre 13 coeficientes, y entre 24 y 40 filtros.
 
 ### Entrenamiento y visualización de los GMM.
 
