@@ -115,7 +115,7 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
     ![Alt text](image-1.png)
     Finalmente, para representar las gráficas a partir de los ficheros de texto, hemos ejecutado el fichero de matlab "graficas.m", cuyo código es el siguiente:
 
-```c
+  ```c
     %LP
       datos_lp = load('lp_2_3.txt');
       coef_2_lp = datos_lp(:,1);
@@ -128,9 +128,9 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
       xlabel('Coeficiente 2')
       ylabel('Coeficiente 3')
       grid on
-```
+  ```
     
-    
+  ```c 
       %LPCC
     
       datos_lpcc = load('lpcc_2_3.txt');
@@ -144,7 +144,8 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
       xlabel('Coeficiente 2')
       ylabel('Coeficiente 3')
       grid on
-    
+    ```
+    ```c
       %MFCC
     
       datos_mfcc = load('mfcc_2_3.txt');
@@ -158,7 +159,7 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
       xlabel('Coeficiente 2')
       ylabel('Coeficiente 3')
       grid on
-  
+     ```
 
     Hemos obtenido las siguientes graficas de la dependencia entre los coeficientes 2 y 3 de cada parametrización:
     ![Alt text](image-2.png)
