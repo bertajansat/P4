@@ -128,7 +128,7 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
       xlabel('Coeficiente 2')
       ylabel('Coeficiente 3')
       grid on
-        ```
+```
     
     
       %LPCC
