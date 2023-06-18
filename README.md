@@ -214,9 +214,7 @@ Complete el código necesario para realizar reconociminto del locutor y optimice
     |                    | LP      | LPCC   | MFCC |
     |--------------------|:-------:|:------:|:----:|
     | Número de errores  |         |        |      |
-    |--------------------|---------|--------|------|
     | Número total       |         |        |      |
-    |--------------------|---------|--------|------|
     | Tasa de error (%)  |         |        |      |
 
 ### Verificación del locutor.
