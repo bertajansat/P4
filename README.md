@@ -211,11 +211,19 @@ Obtenemos el gráfico anterior usando:
   de la página 20 del enunciado puede servirle de referencia del resultado deseado). Analice la capacidad
   del modelado GMM para diferenciar las señales de uno y otro.
 
-![image](https://github.com/bertajansat/P4/assets/127047656/642eda55-bb1e-4dea-ba0e-30e686ae9aba)
+Primero lo hacemos con el comando:
 
-Esta gráfica la hemos obtenido a través del comando:
+![image](https://github.com/bertajansat/P4/assets/127047656/10d9a1ab-62cc-4f75-9020-69d3c33ce418)
 
-![image](https://github.com/bertajansat/P4/assets/127047656/51822e13-02e5-4be6-917f-6ab5bd94516a)
+Y obtenemos la siguiente gráfica:
+
+![image](https://github.com/bertajansat/P4/assets/127047656/6815d19f-7a2d-4257-92bf-52ed34dc52f5)
+
+Posteriormente usamos un locutor distinto: 
+
+![image](https://github.com/bertajansat/P4/assets/127047656/df699190-dc3f-40c4-9322-cdb976678f6d)
+
+
 
 
 ### Reconocimiento del locutor.
