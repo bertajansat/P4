@@ -132,9 +132,8 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
       xlabel('Coeficiente 2')
       ylabel('Coeficiente 3')
       grid on
-  ```
+
     
-  ```c 
       %LPCC
     
       datos_lpcc = load('lpcc_2_3.txt');
@@ -148,8 +147,7 @@ Usamos de nuevo la referencia del fichero wav2lp.sh. Ahora utilitzamos el comand
       xlabel('Coeficiente 2')
       ylabel('Coeficiente 3')
       grid on
-    ```
-    ```c
+
       %MFCC
     
       datos_mfcc = load('mfcc_2_3.txt');
